@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp">
+    <EditText
+        android:id = "@+id/editText1"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:hint="Login"
+        />
+    <EditText
+        android:id = "@+id/editText2"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:inputType = "textPassword"
+        android:layout_marginTop="45dp"
+        android:hint="Password"
+        android:layout_gravity="center_vertical"
+
+        />
+    <TextView
+        android:id = "@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/design_default_color_error"
+        />
+    <Button
+        android:id = "@+id/buttonLogin"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "Login"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50pt"
+        />
+</FrameLayout>
