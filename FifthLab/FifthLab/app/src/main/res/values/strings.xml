@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SecondLab</string>
+    <string name="btn_add_eng">Add</string>
+    <string name="btn_add_rus">Добавить</string>
+    <string name="btn_remove_eng">Remove</string>
+    <string name="btn_remove_rus">Удалить</string>
+</resources>
