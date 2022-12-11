@@ -42,7 +42,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         List<User> userList;
         userList = getAllUsers();
 
-        if(!userList.isEmpty()){
+        if(!userList.isEmpty()){ //не пустой
             for (User userGetDB : userList){
                 String log = userGetDB.getLogin();
 
@@ -104,7 +104,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     User user = new User();
                     user.setLogin(cursor.getString(1));
                     user.setPass(cursor.getString(2));
-                    userLog = user.getLogin() + " " + user.getPass();
+                    userLog = user.getLogin() + " " + user.getPass(); //строка
                 } while (cursor.moveToNext());
             }
         }

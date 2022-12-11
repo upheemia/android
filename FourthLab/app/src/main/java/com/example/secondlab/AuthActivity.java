@@ -32,9 +32,9 @@ public class AuthActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
-        sharedPref =  this.getSharedPreferences("SharedPref", MODE_PRIVATE);
+        sharedPref =  this.getSharedPreferences("SharedPref", MODE_PRIVATE); //данные
         editor = sharedPref.edit();
-        isRus = sharedPref.getBoolean("isRus", true);
+        isRus = sharedPref.getBoolean("isRus", true); //узнаем язык
 
         EditText username = (EditText)findViewById(R.id.editText1);
         EditText password = (EditText)findViewById(R.id.editText2);
@@ -45,7 +45,7 @@ public class AuthActivity extends Activity {
         password.setHint(isRus ? passwordRus : passwordEng);
         buttonLogin.setText(isRus ? authRus : authEng);
 
-        String previousUsername = sharedPref.getString("username", null);
+        String previousUsername = sharedPref.getString("username", null); //узнаем юзернейм
         if (previousUsername != null) {
             username.setText(previousUsername);
         }
@@ -78,7 +78,7 @@ public class AuthActivity extends Activity {
 
     public void login (String username) {
         editor.putString("username", username);
-        editor.apply();
+        editor.apply(); //сохранение изменений
         Intent intent = new Intent(this, ListActivity.class);
         intent.putExtra("username", username);
         startActivity(intent);

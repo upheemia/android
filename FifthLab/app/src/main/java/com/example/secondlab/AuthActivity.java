@@ -32,12 +32,12 @@ public class AuthActivity extends Activity {
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String messageAdd = db.addUser(new User(username.getText().toString(), password.getText().toString()));
-                if(messageAdd.equals("Login available")){
+                String messageAdd = db.addUser(new User(username.getText().toString(), password.getText().toString())); //добавление нового юзера
+                if(messageAdd.equals("Login available")){ //еще не зареган
                     handleError(String.format("User %s is registered", username.getText().toString()));
                 }
                 else{
-                    handleError(messageAdd);
+                    handleError(messageAdd); //уже занят
                 }
             }
         });
@@ -45,7 +45,7 @@ public class AuthActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (username.getText().toString().length() == 0 || password.getText().toString().length() == 0){
-                    handleError("Fill all fields");
+                    handleError("Fill all fields"); //заполните
                 } else {
                     handleError("");
                     signInApp();
