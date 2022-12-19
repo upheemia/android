@@ -32,7 +32,7 @@ public class AuthActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
-        sharedPref =  this.getSharedPreferences("SharedPref", MODE_PRIVATE); //данные
+        sharedPref =  this.getSharedPreferences("SharedPref", MODE_PRIVATE); //получаем данные
         editor = sharedPref.edit();
         isRus = sharedPref.getBoolean("isRus", true); //узнаем язык
 
@@ -78,7 +78,7 @@ public class AuthActivity extends Activity {
 
     public void login (String username) {
         editor.putString("username", username);
-        editor.apply(); //сохранение изменений
+       // editor.apply(); //сохранение изменений
         Intent intent = new Intent(this, ListActivity.class);
         intent.putExtra("username", username);
         startActivity(intent);

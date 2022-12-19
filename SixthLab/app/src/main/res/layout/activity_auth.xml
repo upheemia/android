@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp">
+    <EditText
+        android:id = "@+id/editText1"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:hint="Login"
+        />
+    <EditText
+        android:id = "@+id/editText2"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:inputType = "textPassword"
+        android:layout_marginTop="45dp"
+        android:hint="Password"
+        android:layout_gravity="center_vertical"
+
+        />
+    <TextView
+        android:id = "@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/design_default_color_error"
+        />
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/buttonSingUp"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="146dp"
+            android:layout_height="50dp"
+            android:text="Sign Up" />
+
+        <Button
+            android:id = "@+id/buttonLogin"
+            android:layout_width = "146dp"
+            android:layout_height = "50dp"
+            android:text = "Login"
+            />
+
+
+    </LinearLayout>
+</FrameLayout>

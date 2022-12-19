@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Change password"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/oldPass"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:hint="Enter current password"
+        android:paddingStart="5dp"
+        android:paddingTop="8dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/newPass"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:hint="Enter new password"
+            android:paddingStart="5dp"
+            android:paddingTop="8dp"
+            android:autofillHints="password" />
+
+        <Button
+            android:id="@+id/settingEditBut"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:text="Change" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorText"
+        android:textColor="@color/design_default_color_error"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Delete user"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/settingDelBut"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:text="Delete"
+ />
+
+</LinearLayout>
+
